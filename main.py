@@ -10,6 +10,9 @@ ha_protocol = config('HA_PROTOCOL')
 ha_host = config('HA_HOST')
 ha_port = config('HA_PORT')
 
+# Loads sleep delta
+delta = config("DELTA")
+
 # Loads entities
 entities = config('ENTITIES').split(';')
 
@@ -89,4 +92,4 @@ while True:
                 print("WILL EXIT!")
                 exit()
 
-    time.sleep(5)
+    time.sleep(delta)
